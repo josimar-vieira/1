@@ -1,0 +1,794 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box; 
+	font-family: 'Roboto', sans-serif;
+}
+
+html,body{height: 100%;}
+
+.clear{clear: both;}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	background-color:#000724;
+	overflow: hidden;
+}
+
+header{
+	width: 100%;
+	padding: 30px 2%;
+	position: fixed;
+	background-color: #0A1027;
+	z-index:1; 
+}
+
+/*sessao menu mobile*/
+
+nav.menu-mobile{
+	width: 43px;
+	height: 36px;
+	cursor: pointer;
+	background-image: url('../imagens/menu-mobile.png');
+	background-size: 100% 100%;
+	float: right;
+	display: none;
+	z-index: 2;
+}
+
+nav.menu-mobile ul{
+	display: none;
+	text-align: center;
+	width: 100%;
+	position:absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: white;
+}
+
+nav.menu-mobile ul li{
+	text-transform: uppercase;
+	padding:10px 0; 
+	/*z-index:4;*/
+}
+
+/*~menu desktop*/
+
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding:0 15px;
+	z-index: 3;
+
+}
+ nav ul li a{
+ 	text-decoration: none;
+ 	text-transform: uppercase;
+ 	font-size: 17px;
+ 	color: #ccc;
+ }
+
+/*inicio da estilizaçao da capa*/
+
+.capa{
+	width: 100%;
+	max-width: 1200px;
+	height:550px;
+	margin: 0 auto;
+	background-image: url('../imagens-icones/capa.jpg');
+    background-position:center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+/*id banner capa*/
+#banner-480px{
+	display: none;
+	width: 98%;
+	max-height:300px;
+	top: 100px;
+	padding-top:30px; 
+	background-color:rgba(255,160,0,0.1);
+	transition: 2s;
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    border-bottom:2px solid blue;
+    border-radius:0 50px 50px 0 ;
+    }
+
+#banner-480px h2{
+	display: none;
+    color: white;
+    font-size: 25px;
+    padding-top: 60px;
+    margin: 30px 50px; 
+}
+
+.msg-mobile2{
+	display: none;
+}
+
+.logomarca{
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-image: url('../imagens/logo-top.png');
+	background-size:cover;
+	position: relative;
+	z-index: 1;
+}
+
+.logomarca-480px{
+	display: none;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	background-image: url('../imagens/logo-top.png');
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+
+.banner-capa{
+	width: 550px;
+	height: 250px;
+	position: relative;
+	float: right;
+	top: 60px;
+	z-index: 2;
+	transition: 3s;
+	background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,0.4));
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    border-bottom:2px solid blue;
+    border-radius:0 50px 50px 0 ;
+   
+}
+
+.banner-capa h2{
+    color: white;
+    font-size: 25px;
+    padding-top: 40px;
+    margin: 30px 50px; 
+}
+
+.msg-mobile{
+	display: none;
+}
+
+.msg2-mobile{display: none;}
+
+/*banner desktop*/
+.msg3-desktop{
+	width: 100%;
+	max-width: 500px;
+	height: 170px;
+	position:relative;
+	top:150px;
+	float: left;
+	padding: 20px 30px;
+	background-image: linear-gradient(to right, rgba(199,216,230),rgba(255,0,0,0));
+    border-radius:50px 0 0 50px ;
+    transition: 2s;
+}
+.msg3-desktop h2{
+	color: black;
+	font-family:sans-serif;
+}
+.msg3-desktop p{
+	font-size: 20px;
+}
+
+.botao{
+	width: 220px;
+	height: 70px;
+	background-color:green;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px 60px;
+	cursor: pointer;
+	transition: 3s;
+}
+
+.botao:hover{
+	background-color:#438c3e;
+}
+.botao span{
+	color: white;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+  /*inicio da section serviços*/
+[data-anime] {
+  opacity: 0;
+  transition:1s;
+}
+ 
+[data-anime="left"] {
+  transform: translate3d(-100px, 0, 0);
+}
+ 
+[data-anime="right"] {
+  transform: translate3d(20px, 0, 0);
+}
+
+[data-anime="right-banner"] {
+  transform: translate3d(200px, 0, 0);
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -20px, 0);
+}
+
+[data-anime="bottom"] {
+  transform: translate3d(0px, 20px, 0);
+}
+
+[data-anime="top-480px"] {
+  transform: translate3d(0px, -400px, 0);
+}
+ 
+ 
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+.servicos{
+	width: 100%;
+	background-color:#000724;	
+}
+
+.h2{
+	border-bottom: 1px solid white;
+}
+
+.servicos h2{
+	padding-bottom: 10px;
+	font-size: 38px;
+	text-align: center;
+	color:white;	
+}
+ /*container contendo os icones de serviços */
+.servicos .container{
+    max-width: 1000px;
+	background-color:#000724;
+	padding: 30px 2%;
+}
+
+.mosaico{
+	width:100%;
+	padding: 20px 0;
+    display: flex;
+    /*transition: 3s;*/
+}
+
+
+.icone-servico{
+	width: calc(100% / 3);
+	height: 250px;
+	background-color: white;
+	border: 1px solid #000724;
+}
+
+.icone-servico:hover{
+	 transform: scale(1.1, 1.1);
+
+}
+
+.img-icone{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/lavadora.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+
+}
+
+.img-icone span{
+	font-size: 25px;
+}
+
+.img-icone h2{
+    padding: 100px 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+    line-height: 30px;    
+}
+
+.img-icone h2:hover{
+   color:rgba(0,0,0,0.9);
+}
+
+.img-icone2{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/secadora.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+
+.img-icone2 span{
+	font-size: 25px;
+}
+
+.img-icone2 h2{
+    padding: 100px 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+     line-height: 30px; 
+}
+
+.img-icone2 h2:hover{
+   color:rgba(0,0,0,0.9);
+}
+
+.img-icone3{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/lavalouças1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.img-icone3 span{
+	font-size: 25px;
+}
+
+.img-icone3 h2{
+    padding: 100px 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+     line-height: 30px;
+    
+}
+
+.img-icone3 h2:hover{
+   color:rgba(0,0,0,0.9);
+
+}
+
+.img-icone4{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/microondas.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80%;
+}
+
+.img-icone4 span{
+	font-size: 25px;
+}
+
+.img-icone4 h2{
+    padding: 100px 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+     line-height: 30px;
+    
+}
+
+.img-icone4 h2:hover{
+   color:rgba(0,0,0,0.9);
+
+}
+
+.img-icone5{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/geladeira.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+}
+
+.img-icone5 span{
+	font-size: 25px;
+}
+
+.img-icone5 h2{
+    padding: 100px 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+    line-height: 30px;
+    
+}
+
+.img-icone5 h2:hover{
+   color:rgba(0,0,0,0.9);
+
+}
+
+.img-icone6{
+	width: 100%;
+	height: 100%;
+	background-image: url('../imagens-icones/Coifa-fogao.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:100%;
+}
+
+.img-icone6 span{
+	font-size: 25px;
+}
+
+.img-icone6 h2{
+    padding: 30% 0;
+    color:rgba(0,0,0,0.0);
+    transition: 1s;
+    line-height: 40px;
+    
+}
+
+.img-icone6 h2:hover{
+   color:rgba(0,0,0,0.9);
+
+}
+
+/*sobre a empressa*/
+
+.sobre{
+	width: 100%;
+	padding:0 2%; 
+	margin: 0 auto;
+	background-image:linear-gradient(white,#ccc);
+    padding-bottom: 30px;
+	
+}
+
+.sobre .container{
+	width:100%;
+	max-width: 600px;
+	background-color: white;	
+}
+
+.conteudo-img{
+	width: 100%;
+	height: 200px;
+	background-image: url('../imagens-icones/sobre-a-empresa-1.png');
+	background-size:contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.texto{
+	width: 100%;
+	padding:30px; 
+	background-image:linear-gradient(white,#ccc);
+	
+}
+.texto p{
+	text-align:justify;
+}
+/*fim do sobre a empresa*/
+
+  /*inicio do radape*/
+
+.footer{
+	width: 100%;
+	/*padding: 0 2%;*/
+	background-color:#0A1027; 
+}
+
+.footer .container{
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	background-color: #0A1027;
+	padding: 20px 2%;
+}
+.footer .container div > p{
+	color:white;
+}
+
+.atendimento{
+	width: 33.3333%;
+	border-right: 1px solid white;
+	text-align: center;
+	
+}
+.atendimento h2{
+	font-size: 20px;
+	color: white;
+	line-height: 30px;
+}
+
+.atendimento2{
+	width: 33.3333%;
+	text-align: center;
+	
+}
+.atendimento2 h2{
+	font-size: 20px;
+	color: white;
+	line-height: 30px;
+}
+
+
+.atd-ul li{
+	color: white;
+	display: block;
+
+}
+
+/*estilizaçao whats*/
+.whatsapp{
+	width: 33.3333%;
+	/*height: 200px;*/
+	border-right: 1px solid white;
+	text-align: center;
+
+}
+.whatsapp a{text-decoration: none;}
+.whatsapp h2{
+	font-size: 20px;
+	color: white;
+	line-height: 30px;
+	padding-bottom: 10px;
+}
+
+.botao-w{
+	width: 200px;
+	height: 50px;
+	background-color:green;
+	cursor: pointer;
+    margin: 0 auto;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+.botao-w:hover{
+	background-color:#438c3e;
+}
+
+.botao-w > span{
+	color: white;
+	font-weight: 300;
+	font-size: 22px;
+}    
+                             /*FIM DAS ESTILIZAÇOES DO CSS*/
+
+            /*media screen para o elemento icone-serviço:hover*/
+
+@media screen and (max-width:1000px){
+	.icone-servico:hover{
+	 transform: none;
+     }
+}
+  /*fim da media screen para o elemento icone-serviço:hover*/
+
+/*inicio das media screen*/
+
+@media screen and (max-width: 768px){
+	header{
+		z-index: 2;
+		background-color: rgba(0,0,0,0);
+	}
+	
+     nav.menu{
+     	display: none;
+     }
+
+     nav.menu-mobile{
+     	display: block;
+     	z-index: 5;
+     }
+
+     nav ul li{
+     /*width: 90%;*/
+	 display:block;
+	 background-color:#0A1027;
+	 z-index: 4;
+     }
+ /*media screen da capa*/
+
+	.capa{
+    background-image: url('../imagens-icones/capa2.jpg');
+    background-size:90% 60%;
+    }
+ 
+/*~media screen do banner-capa*/
+
+   .banner-capa{
+	width: 100%;
+	max-width: 500px;
+	height: 250px;
+	background-image: linear-gradient(to left, rgba(0,0,0,0.9),rgba(0,0,255,0.2));
+	z-index: 1;	
+    }
+
+/*fim da media screen da capa*/
+/*media screen msg3 para tablet 768px*/
+
+   .msg3-desktop{
+	width: 100%;
+	max-width: 500px;
+	height: 150px;
+	top:100px;
+	padding-left: 2%;
+    }
+    .msg3-desktop h2{
+    font-size: 25px;
+    }
+    .msg3-desktop p{
+	font-size: 17px;
+    }
+
+/*media screen mosaico em display inline-block para 768 px*/
+	.mosaico{
+	width: 100%;
+	/*max-width: 700px;*/
+    display:inline-block;
+    transition: 1s;
+    }
+
+   .icone-servico{
+    width:100%;
+    height: 300px;
+    margin-bottom: 15px;
+    transition: 2s;
+    }
+
+	.img-icone h2{
+    color:rgba(0,0,0,0.9);}
+    .img-icone2 h2{
+    color:rgba(0,0,0,0.9);}
+    .img-icone3 h2{
+    color:rgba(0,0,0,0.9);}
+    .img-icone4 h2{
+    color:rgba(0,0,0,0.9);}
+    .img-icone5 h2{
+    color:rgba(0,0,0,0.9);}
+    .img-icone6 h2{
+    color:rgba(0,0,0,0.9);
+    padding: 100px 0;
+    }
+/*MEDIA SCREEN DO RODAPE*/
+
+	.footer{
+	width: 100%;
+	
+    }
+
+   .footer .container{
+	width: 100%;
+    display: block;
+    background-image:linear-gradient(#000724,black);
+    }
+
+    .atendimento{
+    	width: 100%;
+    	border-right:0;
+    }
+    .whatsapp{
+    	width: 100%;
+    	padding: 30px 0;
+    	border-right:0;
+    }
+    .atendimento2{
+    	width: 100%;
+    	padding:30px 0; 
+    	
+    }
+}   
+
+
+/*media screen do banner capa 480PX*/
+
+@media screen and (max-width: 480px){
+	header{z-index: 3;}
+    nav.menu-mobile{
+    	/*float: left;*/
+    }
+	.capa{
+	width: 100%;
+	height:450px;
+    background-image: url('../imagens/capa-mobile.jpg');
+    background-size:95% 70%;
+    }
+
+    .banner-capa{
+    display: none;
+    }
+
+    .banner-capa h2{
+    display: none;
+    } 
+
+    .msg-mobile{
+    width: 90%;
+	display:block;
+	font-size: 19px;
+	color: white;
+	border-bottom: 1px solid white;
+	padding: 0 5px;
+	
+    }
+
+    .logomarca-480px{
+	display:block;
+	position: absolute;
+	top: 70px;
+	left: 5px;
+}
+                  /*efeito banner480px*/
+    
+    #banner-480px{ 
+    display: block;
+	width: 98%;
+	max-height:300px;
+	position: relative;
+	top: 250px;
+	padding-top:10px; 
+	background-color:rgba(255,160,0,0.1);
+	z-index: 2;
+    }
+
+    #banner-480px h2{
+	display: block;
+    color: white;
+    font-size: 25px;
+    padding-top: 0px;
+    margin: 10px 10px; 
+    }
+
+    .msg-mobile2{
+	display:block;
+    }
+/*fim da estilizaçao do banner*/
+    .botao{
+    	display: none;
+    }
+    .msg3-desktop{
+    	display: none;
+    }
+     .servicos h2{
+     	font-size: 28px;
+     }
+
+    .servicos{
+    	padding: 0;
+    }
+    .footer{
+    	max-width:480px; 
+    }
+}
+
+@media screen and (max-width: 348px){
+	#banner-480px{
+		padding-top: 20px;
+	}
+	#banner-480px h2{
+     font-size: 22px;
+	}
+}
+@media screen and (max-width: 312px){
+	#banner-480px{
+		padding-top:0;
+	}
+	#banner-480px h2{
+     font-size: 20px;
+	}
+}
+@media screen and (max-width: 283px){
+	#banner-480px h2{
+		font-size: 19px;
+	}
+}
+@media screen and (max-width: 270px){
+	#banner-480px{
+		max-height: 220px;
+		padding-bottom: 40px;
+	}
+}
+
+
